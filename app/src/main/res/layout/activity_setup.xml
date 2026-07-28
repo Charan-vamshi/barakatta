@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_title"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+            android:fontFamily="serif"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Player count -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/num_players"
+            android:textSize="15sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgPlayerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="28dp">
+
+            <RadioButton
+                android:id="@+id/rb2Players"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  2 Players"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/gold"
+                android:textSize="16sp"
+                android:checked="true"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/rb3Players"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  3 Players"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/gold"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp" />
+
+            <RadioButton
+                android:id="@+id/rb4Players"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  4 Players"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/gold"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <!-- Names -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_names"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPlayer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 1 (Red)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:backgroundTint="@color/accent"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPlayer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 2 (Blue)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:backgroundTint="@color/accent"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etPlayer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 3 (Green)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:backgroundTint="@color/accent"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etPlayer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 4 (Yellow)"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:backgroundTint="@color/accent"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="32dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/start_game"
+            android:textSize="18sp"
+            android:textColor="@color/bg_dark"
+            android:backgroundTint="@color/gold"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+</ScrollView>
