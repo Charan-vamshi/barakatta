@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="gold">#FFD700</color>
+    <color name="accent">#E65100</color>
+
+    <!-- Backgrounds -->
+    <color name="bg_dark">#1A0A00</color>
+    <color name="bg_panel">#2C1600</color>
+    <color name="bg_card">#3E2000</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFDBB5</color>
+    <color name="text_secondary">#C09060</color>
+    <color name="text_hint">#6D4C41</color>
+
+    <!-- Players -->
+    <color name="player1">#F44336</color>
+    <color name="player2">#2196F3</color>
+    <color name="player3">#4CAF50</color>
+    <color name="player4">#FFC107</color>
+
+    <!-- Board -->
+    <color name="board_outer">#E8D5B0</color>
+    <color name="board_middle">#D4A86A</color>
+    <color name="board_inner">#C07C2A</color>
+    <color name="board_center">#FFD700</color>
+    <color name="board_safe">#FFFDE7</color>
+</resources>
