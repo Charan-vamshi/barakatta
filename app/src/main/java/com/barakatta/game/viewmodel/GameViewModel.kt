@@ -3,6 +3,7 @@ package com.barakatta.game.viewmodel
 import androidx.lifecycle.*
 import com.barakatta.game.engine.GameEngine
 import com.barakatta.game.model.*
+import com.barakatta.game.ui.HapticManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -134,6 +135,7 @@ class GameViewModel : ViewModel() {
             if (isFinish) {
                 _toastMessage.value = "⭐ Coin reached the center!"
             } else if (isKill) {
+                HapticManager.kill()
                 // The killed coin is returned to pathIndex 0 by the engine instantly,
                 // so visually it just pops back home after the kill emoji.
                 _toastMessage.value = "💀 Opponent's coin sent home!"
@@ -153,6 +155,7 @@ class GameViewModel : ViewModel() {
             }
 
             if (eng.state.phase == TurnPhase.GAME_OVER) {
+                HapticManager.win()
                 _isAnimating.value = false
                 push()
                 return@launch

@@ -24,6 +24,7 @@ class GameActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        HapticManager.init(this)
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

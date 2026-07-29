@@ -84,6 +84,7 @@ class DiceView @JvmOverloads constructor(
             addUpdateListener {
                 currentValue = listOf(1, 2, 3, 4, 5, 6, 12).filter { it != currentValue }.random()
                 invalidate()
+                HapticManager.tick()
             }
         }
         
@@ -100,6 +101,7 @@ class DiceView @JvmOverloads constructor(
                 currentValue = finalValue
                 isRolling = false
                 invalidate()
+                HapticManager.thud()
                 onComplete()
             }
         })
