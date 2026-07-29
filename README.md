@@ -51,4 +51,4 @@ Safe cells (X marks) and home cells = no-kill zones.
 ## Finish / Win
 
 - Reaching center **D4** requires an exact move count
-- Win condition: all 6 of a player's coins reach D4
+- Win condition: all 6 of a player's coins reach D4 
