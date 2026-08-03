@@ -152,12 +152,24 @@ class GameActivity : AppCompatActivity() {
         if (state.phase == TurnPhase.GAME_OVER) {
             val winner = state.winner
             if (winner != null && binding.winnerOverlay.visibility == View.GONE) {
-                binding.winnerOverlay.visibility = View.VISIBLE
+                HapticManager.win()
                 binding.tvWinnerText.text = "${winner.name} WINS!"
-                binding.tvWinnerText.setTextColor(winner.color)
                 
+                binding.winnerOverlay.alpha = 0f
+                binding.winnerOverlay.scaleX = 0.5f
+                binding.winnerOverlay.scaleY = 0.5f
+                binding.winnerOverlay.visibility = View.VISIBLE
+                
+                binding.winnerOverlay.animate()
+                    .alpha(1f)
+                    .scaleX(1f)
+                    .scaleY(1f)
+                    .setDuration(600)
+                    .setInterpolator(android.view.animation.OvershootInterpolator())
+                    .start()
+                    
                 binding.confettiView.burst()
-                
+            }    
                 binding.btnPlayAgain.setOnClickListener {
                     binding.winnerOverlay.visibility = View.GONE
                     val playerCount = intent.getIntExtra("PLAYER_COUNT", 2)
