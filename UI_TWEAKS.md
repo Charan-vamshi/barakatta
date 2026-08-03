@@ -6,3 +6,4 @@ Applied animation micro-interaction phase 5
 Applied animation micro-interaction phase 6
 Applied animation micro-interaction phase 7
 Applied animation micro-interaction phase 8
+Applied animation micro-interaction phase 9
